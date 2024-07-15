@@ -1,0 +1,142 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="Website_Gym.Master" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Thememarch" />
+    <link rel="icon" href="assets/img/favicon.svg" />
+    <title>Gymfito - Fitness <%: Page.Title %></title>
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/aos.css" />
+    <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <!-- Start Header Section -->
+    <header class="ak-site_header ak-style1 ak-sticky_header">
+        <div class="ak-main_header">
+            <div class="container">
+                <div class="ak-main_header_in">
+                    <div class="ak-main-header-left">
+                        <a class="ak-site_branding" href="index.aspx">
+                            <img src="assets/img/logo.svg" alt="...">
+                        </a>
+                    </div>
+                    <div class="ak-main-header-center">
+                        <div class="ak-nav ak-medium">
+                            <ul class="ak-nav_list">
+                                <li>
+                                    <a href="index.aspx">Home</a>
+                                </li>
+                                <li>
+                                    <a href="about.aspx">About</a>
+                                </li>
+                                <li>
+                                    <a href="bmi_calculator.aspx">Advice</a>
+                                </li>
+                                <li>
+                                    <a href="contact.aspx">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ak-main-header-right">
+                        <a href="join.aspx" class="button-primary">
+                            JOIN NOW
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header Section -->
+
+    <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+
+    <!-- Start Footer -->
+    <div class="ak-height-135 ak-height-lg-80"></div>
+    <footer class="footer">
+        <img src="assets/img/footer_bg_light.svg" class="footer_bg_light" alt="...">
+        <div class="border-footer-1"></div>
+        <div class="container">
+            <div class="footer style-1">
+                <!-- <div class="border-footer-1"></div> -->
+                <div class="location-contact">
+                    <h5 class="title">LOCATION & CONTACT</h5>
+                    <p class="address"><span>Address:</span> 136 Nguyen Thien Ke
+                        <br> Son Tra, Da Nang, Vietnam
+                    </p>
+                    <a href="mailto:gymAdmin@gmail.com" class="email"><span>Email:</span> gymAdmin@gmail.com</a>
+                    <p><span class="time">Open Hour:</span> Sun - Thu: Open 24/7</p>
+                </div>
+
+                <div class="link-social">
+                    <div class="link">
+                        <h5 class="title">QUICK LINK</h5>
+                        <a href="about.aspx">About</a>
+                        <a href="bmi_calculator.aspx">Advice</a>
+                        <a href="contact.aspx">Contact Us</a>
+                    </div>
+                    <div class="social">
+                        <h5 class="title">SOCIAL</h5>
+                        <a href="https://www.facebook.com/">Facebook</a>
+                        <a href="https://www.instagram.com/">Instagram</a>
+                    </div>
+                </div>
+
+                <div class="logo-footer">
+                    <div class="logo">
+                        <img src="assets/img/logo.svg" alt="logo">
+                    </div>
+                    <p class="desp">Chose Your Best GYM, <br>Gain Your Best Life</p>
+                    <a href="tel:+84349402518" class="phone">
+                        <span class="icon">
+                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20.0137" r="20" fill="#F67A45" />
+                                <g clip-path="url(#clip0_2083_460)">
+                                    <path
+                                        d="M26.7162 22.5158C25.7366 22.5158 24.7748 22.3626 23.8633 22.0614C23.4167 21.9091 22.8676 22.0488 22.595 22.3288L20.796 23.6869C18.7096 22.5732 17.4245 21.2884 16.326 19.2177L17.6441 17.4655C17.9865 17.1235 18.1094 16.624 17.9622 16.1552C17.6597 15.239 17.506 14.2776 17.506 13.2976C17.5061 12.5896 16.9301 12.0137 16.2222 12.0137H13.2839C12.576 12.0137 12 12.5896 12 13.2975C12 21.4121 18.6016 28.0137 26.7162 28.0137C27.4241 28.0137 28 27.4377 28 26.7298V23.7997C28 23.0918 27.424 22.5158 26.7162 22.5158Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2083_460">
+                                        <rect width="16" height="16" fill="white" transform="translate(12 12.0137)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+                        <h3 class="title">+84 349402518</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-footer-2"></div>
+        <div class="copyright-text">
+            <p>Copyright 2024, All Right reserved</p>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    
+    <!--Scroll Up-->
+        <span class="ak-scrollup">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 10L1.7625 11.7625L8.75 4.7875V20H11.25V4.7875L18.225 11.775L20 10L10 0L0 10Z"
+                fill="currentColor" />
+        </svg>
+    </span>
+    <!--End Scroll Up-->
+
+
+    <script src="assets/js/plugins/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/plugins/aos.js"></script>
+    <script src="assets/js/plugins/lightgallery.min.js"></script>
+    <script src="assets/js/plugins/swiper.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
