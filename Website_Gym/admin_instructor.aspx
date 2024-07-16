@@ -45,93 +45,18 @@
           <div class="card-body">
             <div class="customer-table">
               <div class="table-responsive white-space-nowrap">
-                <table class="table align-middle">
-                  <thead class="table-light">
-                    <tr>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Phone</th>
-                      <th>Class</th>
-                      <th>Address</th>
-                      <th>Day</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <a class="d-flex align-items-center gap-3" href="javascript:;">
-                          <div class="customer-pic">
-                            <img src="material/images/avatars/01.png" class="rounded-circle" width="40" height="40"
-                              alt="">
-                          </div>
-                          <p class="mb-0 customer-name fw-bold">Andrew Carry</p>
-                        </a>
-                      </td>
-                      <td>
-                        <a href="javascript:;" class="font-text1">abcexample.com</a>
-                      </td>
-                      <td>0349402518</td>
-                      <td>Zumbo</td>
-                      <td>Da Nang</td>
-                      <td>2,3,7</td>
-                      <td>
-                        <div class="d-md-flex d-grid align-items-center gap-1">
-                          <button type="submit" class="btn btn-grd-primary px-1">Delete</button>
-                          <button type="reset" class="btn btn-grd-info px-1">Edit</button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a class="d-flex align-items-center gap-3" href="javascript:;">
-                          <div class="customer-pic">
-                            <img src="material/images/avatars/01.png" class="rounded-circle" width="40" height="40"
-                              alt="">
-                          </div>
-                          <p class="mb-0 customer-name fw-bold">Andrew Carry</p>
-                        </a>
-                      </td>
-                      <td>
-                        <a href="javascript:;" class="font-text1">abcexample.com</a>
-                      </td>
-                      <td>0349402518</td>
-                      <td>Zumbo</td>
-                      <td>Da Nang</td>
-                      <td>2,3,7</td>
-                      <td>
-                        <div class="d-md-flex d-grid align-items-center gap-1">
-                          <button type="submit" class="btn btn-grd-primary px-1">Delete</button>
-                          <button type="reset" class="btn btn-grd-info px-1">Edit</button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a class="d-flex align-items-center gap-3" href="javascript:;">
-                          <div class="customer-pic">
-                            <img src="material/images/avatars/01.png" class="rounded-circle" width="40" height="40"
-                              alt="">
-                          </div>
-                          <p class="mb-0 customer-name fw-bold">Andrew Carry</p>
-                        </a>
-                      </td>
-                      <td>
-                        <a href="javascript:;" class="font-text1">abcexample.com</a>
-                      </td>
-                      <td>0349402518</td>
-                      <td>Zumbo</td>
-                      <td>Da Nang</td>
-                      <td>2,3,7</td>
-                      <td>
-                        <div class="d-md-flex d-grid align-items-center gap-1">
-                          <button type="submit" class="btn btn-grd-primary px-1">Delete</button>
-                          <button type="reset" class="btn btn-grd-info px-1">Edit</button>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <asp:Table ID="StudentTable" runat="server" CssClass="table align-middle">
+                    <asp:TableRow CssClass="table-light"> 
+                        <asp:TableCell>Name</asp:TableCell>
+                        <asp:TableCell>Name</asp:TableCell>
+                        <asp:TableCell>Email</asp:TableCell>
+                        <asp:TableCell>Phone</asp:TableCell>
+                        <asp:TableCell>Class</asp:TableCell>
+                        <asp:TableCell>Address</asp:TableCell>
+                        <asp:TableCell>Day</asp:TableCell>
+                        <asp:TableCell>Action</asp:TableCell>
+                    </asp:TableRow>
+                </asp:Table>
               </div>
             </div>
           </div>
