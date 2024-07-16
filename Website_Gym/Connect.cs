@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -6,7 +6,7 @@ namespace Website_Gym
 {
     public class Connect
     {
-        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\phuoc\Desktop\GymWebsite\Website_Gym\App_Data\QLGym.mdf;Integrated Security=True";
+        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Study\TMDT\GymWebsiteProject\Website_Gym\App_Data\QLGym.mdf;Integrated Security=True";
         private SqlConnection conn;
 
         public void openConnection()
@@ -23,7 +23,7 @@ namespace Website_Gym
             }
         }
 
-        public int executeNonQuery(string sql, SqlParameter[] parameters)
+        public int executeNonQuery(string sql)
         {
             int kq = 0;
             try
@@ -31,7 +31,6 @@ namespace Website_Gym
                 openConnection(); // Đảm bảo kết nối được mở ở đây
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
-                    command.Parameters.AddRange(parameters);
                     kq = command.ExecuteNonQuery();
                 }
             }
