@@ -23,7 +23,7 @@ namespace Website_Gym
             }
         }
 
-        public int executeNonQuery(string sql, SqlParameter[] parameters)
+        public int executeNonQuery(string sql)
         {
             int kq = 0;
             try
@@ -31,7 +31,6 @@ namespace Website_Gym
                 openConnection(); // Đảm bảo kết nối được mở ở đây
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
-                    command.Parameters.AddRange(parameters);
                     kq = command.ExecuteNonQuery();
                 }
             }
