@@ -111,6 +111,10 @@
     <Content Include="admin_instructor.aspx" />
     <Content Include="admin_login.aspx" />
     <Content Include="admin_profile.aspx" />
+    <Content Include="App_Data\QLGym.mdf" />
+    <Content Include="App_Data\QLGym_log.ldf">
+      <DependentUpon>QLGym.mdf</DependentUpon>
+    </Content>
     <Content Include="assets\css\plugins\aos.css" />
     <Content Include="assets\css\plugins\bootstrap.min.css" />
     <Content Include="assets\css\plugins\fontawesome.min.css" />
@@ -657,6 +661,7 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BMICaculator.cs" />
     <Compile Include="bmi_calculator.aspx.cs">
       <DependentUpon>bmi_calculator.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -664,6 +669,7 @@
     <Compile Include="bmi_calculator.aspx.designer.cs">
       <DependentUpon>bmi_calculator.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Connect.cs" />
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -718,9 +724,7 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
