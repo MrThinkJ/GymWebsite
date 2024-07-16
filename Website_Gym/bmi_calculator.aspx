@@ -26,59 +26,41 @@
         <div class="ak-height-150 ak-height-lg-80"></div>
         <div class="container">
             <div class="col-md-8">
-                <form class="row bim-calculator-from">
+                <form id="form1" runat="server" class="row bim-calculator-from">
                     <div class="col-md-6">
-                        <label for="Height" class="label">Your Height*</label>
-                        <input class="form-control style1 type2" id="Height" name="height" type="text"
-                            placeholder="Height...">
+                        <label for="Height" class="label">Your Height*<asp:RegularExpressionValidator ID="height_RegularExpressionValidator" runat="server" ControlToValidate="Height" ErrorMessage="  Nhập số dương" ForeColor="Red" ValidationExpression="^\d+(\.\d+)?$"></asp:RegularExpressionValidator>
+                        </label>
+                        &nbsp;<asp:TextBox ID="Height" runat="server" CssClass="form-control style1 type2" placeholder="Height..."></asp:TextBox>
                     </div>
                     <div class="col-md-6">
-                        <label for="Weight" class="label">Your Weight*</label>
-                        <input class="form-control style1 type2" id="Weight" name="weight" type="text"
-                            placeholder="Weight...">
+                        <label for="Weight" class="label">Your Weight*<asp:RegularExpressionValidator ID="weight_RegularExpressionValidator" runat="server" ControlToValidate="Weight" ErrorMessage="  Nhập số dương" ForeColor="Red" ValidationExpression="^\d+(\.\d+)?$"></asp:RegularExpressionValidator>
+                        </label>
+                        &nbsp;<asp:TextBox ID="Weight" runat="server" CssClass="form-control style1 type2" placeholder="Weight..."></asp:TextBox>
                     </div>
                     <div class="col-md-6">
                         <label for="Gender" class="label">Select Gender*</label>
-                        <select class="form-select style1 type2" id="Gender" name="gender"
-                            aria-label="Default select example">
-                            <option selected>Gender...</option>
-                            <option value="1">Male</option>
-                            <option value="2">Female</option>
-                        </select>
+                        <asp:DropDownList ID="Gender" runat="server" CssClass="form-select style1 type2">
+                            <asp:ListItem Text="Gender..." Value=""></asp:ListItem>
+                            <asp:ListItem Text="Male" Value="Male"></asp:ListItem>
+                            <asp:ListItem Text="Female" Value="Female"></asp:ListItem>
+                        </asp:DropDownList>
                     </div>
                     <div class="col-md-6">
                         <label for="Want" class="label">I Want*</label>
-                        <select class="form-select style1 type2" id="Want" name="want"
-                            aria-label="Default select example">
-                            <option selected>I Want (Weight Loss)...</option>
-                            <option value="Weight Loss">Weight Loss</option>
-                            <option value="Weight Gain">Weight Gain</option>
-                        </select>
+                        <asp:DropDownList ID="Want" runat="server" CssClass="form-select style1 type2">
+                            <asp:ListItem Text="I Want (Weight Loss)..." Value=""></asp:ListItem>
+                            <asp:ListItem Text="Weight Loss" Value="Weight Loss"></asp:ListItem>
+                            <asp:ListItem Text="Weight Gain" Value="Weight Gain"></asp:ListItem>
+                        </asp:DropDownList>
                     </div>
                     <div class="col-12">
-                        <label for="Age" class="label">Your Age*</label>
-                        <input class="form-control style1 type2" id="Age" name="age" type="text" placeholder="Age...">
+                        <label for="Age" class="label">Your Age*<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="Age" ErrorMessage="  Nhập số dương" ForeColor="Red" ValidationExpression="^\d+$"></asp:RegularExpressionValidator>
+                        </label>
+                        &nbsp;<asp:TextBox ID="Age" runat="server" CssClass="form-control style1 type2" placeholder="Age..."></asp:TextBox>
                     </div>
                     <div class="ak-height-35 ak-height-lg-20"></div>
                     <div class="col-md-12">
-                        <button type="submit" class="button-primary style_2 ak-center" id="toggleAdvice">
-                            ASKING FOR ADVICE
-                            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="20"
-                                    viewBox="0 0 16 20" fill="none">
-                                    <g clip-path="url(#clip0_1735_935)">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M0.585999 18.938L9.586 9.93799L0.585999 0.937988H6.99073L15.9907 9.93799L6.99073 18.938H0.585999Z"
-                                            fill="white"></path>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_1735_34593554">
-                                            <rect width="16" height="19" fill="white" transform="translate(0 0.5)">
-                                            </rect>
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </span>
-                        </button>
+                        <asp:Button ID="toggleAdvice" runat="server" Text="ASKING FOR ADVICE" CssClass="button-primary style_2 ak-center" OnClick="toggleAdvice_Click" />
                     </div>
                 </form>
             </div>
@@ -87,17 +69,14 @@
     <!-- End Bim Calculation -->
 
     <!-- Start Advice -->
-    <div class="container mt-5" id="advice" style="display: none;">
+    <div class="container mt-5" id="advice" style="display: block;">
         <div class="services-details-inner-content">
-            <h4 class="titel aos-init aos-animate" data-aos="fade-up">
-                STATUS NOW
-            </h4>
-            <p id="advice_des" class="desp aos-init aos-animate" data-aos="fade-up">
-                Achieving your fitness goals can sometimes feel daunting, but fear not – our team of certified
-                personal trainers is here to guide and support you every step of the way. Whether you're looking to
-                lose weight, build muscle, or improve your overall fitness, our trainers will work closely with you
-                to develop a customized workout plan tailored to your specific goals and abilities.
-            </p>
+            <div>
+                <asp:Label ID="statusLabel" CssClass="titel aos-init aos-animate" runat="server"/>
+            </div>
+            <asp:Label ID="advice_des" runat="server" CssClass="desp aos-init aos-animate" data-aos="fade-up">
+                           <!-- Advice-->     
+            </asp:Label>
             <div class="ak-height-35 ak-height-lg-30"></div>
             <h5 class="title-two aos-init aos-animate" data-aos="fade-up">
                 We believe that nutrition plays a crucial role in achieving optimal fitness and overall well-being.
@@ -273,6 +252,4 @@
         }
     });
     </script>
-
-
 </asp:Content>

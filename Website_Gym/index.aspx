@@ -1,33 +1,32 @@
 ﻿<%@ Page Title=" " Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Website_Gym.index" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-        <!-- Start Hero -->
+    <!-- Start Hero -->
     <section class="ak-hero ak-style1">
         <div class="container">
             <div class="hero-content">
                 <div>
                     <div class="hero-stroke-text">
-                        <h2 class="stroke-text hero-stroke-text-one" data-aos="fade-up" data-aos-delay="0">
-                            Ignite
+                        <h2 class="stroke-text hero-stroke-text-one" data-aos="fade-up" data-aos-delay="0">Ignite
                         </h2>
-                        <h2 class="stroke-text hero-stroke-text-two" data-aos="fade-up" data-aos-delay="300">
-                            Transformation
+                        <h2 class="stroke-text hero-stroke-text-two" data-aos="fade-up" data-aos-delay="300">Transformation
                         </h2>
-                        <h2 class="hero-title-three" data-aos="fade-up" data-aos-delay="600">
-                            & Unite Your Strength
+                        <h2 class="hero-title-three" data-aos="fade-up" data-aos-delay="600">& Unite Your Strength
                         </h2>
                     </div>
-                    <p class="hero-desp" data-aos="fade-up" data-aos-delay="600">Discover fitness excellence at our
+                    <p class="hero-desp" data-aos="fade-up" data-aos-delay="600">
+                        Discover fitness excellence at our
                         premier gym. With top-notch equipment,
                         expert trainers, and
                         dynamic classes, we're committed to helping you reach your goals. Join us today and unleash your
                         full potential!
                     </p>
                     <div data-aos="fade-up" data-aos-delay="600">
-                        <a href="join.aspx" class="button-primary">
-                            JOIN NOW
-                            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="20"
+                        <a href="join.aspx" class="button-primary">JOIN NOW
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20"
                                     viewBox="0 0 16 20" fill="none">
                                     <g clip-path="url(#clip0_1735_935)">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -134,57 +133,78 @@
             <div class="moving-section-in">
                 <div class="moving-section">
                     <h4 class="moving-text">
-                        <span> Rise up </span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span> never give up</span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
+                        <span>Rise up </span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
+                        <span>never give up</span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
                         <span>Train hard</span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
                         <span>Train hard </span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
                         <span>stay humble</span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
                         <span>stay humble</span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
                         <span>be proud</span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
                         <span>Believe in yourself</span>
 
                     </h4>
                 </div>
                 <div class="moving-section">
-                    <h4 class="moving-text"><span> Rise up </span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span> never give up</span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
+                    <h4 class="moving-text"><span>Rise up </span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
+                        <span>never give up</span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
                         <span>Train hard</span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
                         <span>Train hard </span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
                         <span>stay humble</span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
                         <span>stay humble</span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
                         <span>be proud</span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
                         <span>Believe in yourself</span>
                     </h4>
                 </div>
                 <div class="moving-section">
-                    <h4 class="moving-text"><span> Rise up </span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span> never give up</span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
+                    <h4 class="moving-text"><span>Rise up </span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
+                        <span>never give up</span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
                         <span>Train hard</span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
                         <span>Train hard </span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
                         <span>stay humble</span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
                         <span>stay humble</span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
                         <span>be proud</span>
-                        <span><img src="assets/img/next.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next.svg" alt="next-arrow"></span>
                         <span>Believe in yourself</span>
                     </h4>
                 </div>
@@ -195,39 +215,51 @@
                 <div class="moving-section">
                     <h4 class="moving-text">
                         <span>Sweat now, shine later</span>
-                        <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next-black.svg" alt="next-arrow"></span>
                         <span>Stronger every rep</span>
-                        <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
-                        <span> prouder every step</span>
-                        <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next-black.svg" alt="next-arrow"></span>
+                        <span>prouder every step</span>
+                        <span>
+                            <img src="assets/img/next-black.svg" alt="next-arrow"></span>
                         <span>Push your limits</span>
-                        <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next-black.svg" alt="next-arrow"></span>
                         <span>exceed your expectations</span>
                     </h4>
                 </div>
                 <div class="moving-section">
                     <h4 class="moving-text">
                         <span>Sweat now, shine later</span>
-                        <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next-black.svg" alt="next-arrow"></span>
                         <span>Stronger every rep</span>
-                        <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
-                        <span> prouder every step</span>
-                        <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next-black.svg" alt="next-arrow"></span>
+                        <span>prouder every step</span>
+                        <span>
+                            <img src="assets/img/next-black.svg" alt="next-arrow"></span>
                         <span>Push your limits</span>
-                        <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next-black.svg" alt="next-arrow"></span>
                         <span>exceed your expectations</span>
                     </h4>
                 </div>
                 <div class="moving-section">
                     <h4 class="moving-text">
                         <span>Sweat now, shine later</span>
-                        <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next-black.svg" alt="next-arrow"></span>
                         <span>Stronger every rep</span>
-                        <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
-                        <span> prouder every step</span>
-                        <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next-black.svg" alt="next-arrow"></span>
+                        <span>prouder every step</span>
+                        <span>
+                            <img src="assets/img/next-black.svg" alt="next-arrow"></span>
                         <span>Push your limits</span>
-                        <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
+                        <span>
+                            <img src="assets/img/next-black.svg" alt="next-arrow"></span>
                         <span>exceed your expectations</span>
                     </h4>
                 </div>
@@ -254,8 +286,7 @@
             <div class="info-content" data-aos="fade-left">
                 <div class="section-heading style-1">
                     <div class="section-subtitle">About Us</div>
-                    <h2 class="section-title">
-                        Here GYM Fitness Meets
+                    <h2 class="section-title">Here GYM Fitness Meets
                     </h2>
                     <div class="stroke-text" data-text="Excellence!">
                         Excellence!
@@ -316,77 +347,51 @@
     <!-- End About -->
 
 
-    <!-- Start Upcoming Classes -->
-    <div class="ak-height-135 ak-height-lg-80"></div>
-    <section>
-        <div class="container">
-            <div class="d-flex justify-content-between flex-column flex-lg-row gap-2">
-                <div class="section-heading style-1" data-aos="zoom-out">
-                    <h2 class="section-title">
-                        Our Upcoming Classes
-                    </h2>
-                </div>
-                <div class="d-flex gap-3" data-aos-delay="150" data-aos="zoom-out">
-                    <div class="button-arrow-white slider_2-prev">
-                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.5637 0.358104L0.122263 10.7495L10.3204 22.275L21.5202 22.8138C21.5202 22.8138 8.11146 17.3445 8.42872 11.291C8.74597 5.23741 22.6691 0.891968 22.6691 0.891968L11.5637 0.358104Z"
-                                fill="white" />
-                        </svg>
+  <form id="form1" runat="server">
+        <!-- Start Upcoming Classes -->
+        <div class="ak-height-135 ak-height-lg-80"></div>
+        <section>
+            <div class="container">
+                <div class="d-flex justify-content-between flex-column flex-lg-row gap-2">
+                    <div class="section-heading style-1" data-aos="zoom-out">
+                        <h2 class="section-title">Our Upcoming Classes</h2>
                     </div>
-                    <div class="button-arrow-white slider_2-next">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23" fill="none">
-                            <path
-                                d="M11.6529 0.358104L23.0943 10.7495L12.8962 22.275L1.69636 22.8138C1.69636 22.8138 15.1051 17.3445 14.7878 11.291C14.4706 5.23741 0.547485 0.891968 0.547485 0.891968L11.6529 0.358104Z"
-                                fill="white" />
-                        </svg>
+                    <div class="d-flex gap-3" data-aos-delay="150" data-aos="zoom-out">
+                        <div class="button-arrow-white slider_2-prev">
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.5637 0.358104L0.122263 10.7495L10.3204 22.275L21.5202 22.8138C21.5202 22.8138 8.11146 17.3445 8.42872 11.291C8.74597 5.23741 22.6691 0.891968 22.6691 0.891968L11.5637 0.358104Z" fill="white" />
+                            </svg>
+                        </div>
+                        <div class="button-arrow-white slider_2-next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23" fill="none">
+                                <path d="M11.6529 0.358104L23.0943 10.7495L12.8962 22.275L1.69636 22.8138C1.69636 22.8138 15.1051 17.3445 14.7878 11.291C14.4706 5.23741 0.547485 0.891968 0.547485 0.891968L11.6529 0.358104Z" fill="white" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="ak-height-60 ak-height-lg-40"></div>
-            <div class="slider slider_2">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="join.aspx" class="classes-card">
-                            <img src="assets/img/classes_1.jpg" class="card-img" alt="...">
-                            <div class="classes-img-overlay">
-                                <h5 class="classes-title">Kickboxing</h5>
-                                <p class="classes-text"><small>STADIUM</small></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="join.aspx" class="classes-card">
-                            <img src="assets/img/classes_2.jpg" class="card-img" alt="...">
-                            <div class="classes-img-overlay">
-                                <h5 class="classes-title">BODY PUMP</h5>
-                                <p class="classes-text"><small>GYM CENTER</small></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="join.aspx" class=" classes-card">
-                            <img src="assets/img/classes_3.jpg" class="card-img" alt="...">
-                            <div class="classes-img-overlay">
-                                <h5 class="classes-title">HIIT Havoc</h5>
-                                <p class="classes-text"><small>GYM CENTER</small></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="join.aspx" class=" classes-card">
-                            <img src="assets/img/classes_4.jpg" class="card-img" alt="...">
-                            <div class="classes-img-overlay">
-                                <h5 class="classes-title">Muscle</h5>
-                                <p class="classes-text"><small>INDOOR</small></p>
-                            </div>
-                        </a>
+                <div class="ak-height-60 ak-height-lg-40"></div>
+                <div class="ak-height-60 ak-height-lg-40"></div>
+                <div class="slider slider_2">
+                    <div class="swiper-wrapper">
+                        <asp:Repeater ID="ClassesRepeater" runat="server">
+                            <ItemTemplate>
+                                <div class="swiper-slide">
+                                    <asp:HyperLink runat="server" NavigateUrl="join.aspx" CssClass="classes-card">
+                                         <asp:Image runat="server" ImageUrl='<%# ResolveUrl("~/") + Eval("image") %>' CssClass="card-img" AlternateText="..." />
+                                        <div class="classes-img-overlay">
+                                            <h5 class="classes-title"><%# Eval("name") %></h5>
+                                            <p class="classes-text"><small><%# Eval("position") %></small></p>
+                                        </div>
+                                    </asp:HyperLink>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- End Upcoming Classes -->
+        </section>
+        <!-- End Upcoming Classes -->
+    </form>
 
 
     <!-- Start Fun Fact Counter -->
@@ -402,7 +407,9 @@
                     </div>
                     <div class="primary-color-border"></div>
                     <div class="funfact-text">
-                        <p>YEARS OF <br> SERVICE</p>
+                        <p>YEARS OF
+                            <br>
+                            SERVICE</p>
                     </div>
                 </div>
                 <div class="funfact style1">
@@ -412,7 +419,9 @@
                     </div>
                     <div class="primary-color-border"></div>
                     <div class="funfact-text">
-                        <p>FITNESS <br> TRAINEE</p>
+                        <p>FITNESS
+                            <br>
+                            TRAINEE</p>
                     </div>
                 </div>
                 <div class="funfact style1">
@@ -422,7 +431,9 @@
                     </div>
                     <div class="primary-color-border"></div>
                     <div class="funfact-text">
-                        <p>Hours <br> Trained</p>
+                        <p>Hours
+                            <br>
+                            Trained</p>
                     </div>
                 </div>
                 <div class="funfact style1">
@@ -432,7 +443,9 @@
                     </div>
                     <div class="primary-color-border"></div>
                     <div class="funfact-text">
-                        <p>Happy <br> Clients</p>
+                        <p>Happy
+                            <br>
+                            Clients</p>
                     </div>
                 </div>
             </div>
@@ -448,8 +461,7 @@
                 <img src="assets/img/testimonial.jpg" alt="...">
             </div>
             <div class="testimonial-info" data-aos="fade-left">
-                <h2 class="stroke-text" data-text="Feedback!">
-                    Feedback
+                <h2 class="stroke-text" data-text="Feedback!">Feedback
                 </h2>
                 <div class="slider testimonial-slider-home">
                     <div class="swiper-wrapper">
@@ -501,8 +513,9 @@
     <div class="container">
         <div class="partner-client">
             <div class="title">
-                <h1 class="stroke-text">
-                    Trusted <br> Client
+                <h1 class="stroke-text">Trusted
+                    <br>
+                    Client
                 </h1>
             </div>
             <div class="slider partner-client-slider">
@@ -543,7 +556,8 @@
         <div class="subscribe-email">
             <div class="subscribe-content">
                 <h3 class="subscribe-title">SUBSCRIBE TO OUR NEWSLETTER</h3>
-                <p class="subscribe-desp ak-font-18">Whether you're a beginner or a seasoned fitness enthusiast
+                <p class="subscribe-desp ak-font-18">
+                    Whether you're a beginner or a seasoned fitness enthusiast
                 </p>
             </div>
             <form class="subscribe-form">
