@@ -31,6 +31,7 @@
   <link href="sass/responsive.css" rel="stylesheet">
 </head>
 <body>
+    <form id="form" runat="server">
   <!--start header-->
   <header class="top-header">
     <nav class="navbar navbar-expand align-items-center gap-4">
@@ -171,11 +172,9 @@
                 <h5 class="user-name mb-0 fw-bold">Hello, Admin</h5>
               </div>
             </a>
-            <a class="dropdown-item d-flex align-items-center" href="admin_profile.aspx"><i
-                class="material-icons-outlined mx-2">person_outline</i>Profile</a>
-                <hr class="m-0">
-            <a class="dropdown-item d-flex align-items-center" href="admin_login.aspx"><i
-                class="material-icons-outlined mx-2">power_settings_new</i>Logout</a>
+<asp:LinkButton ID="LinkButton1" runat="server" OnClick="btnLogout_Click">
+    <i class="material-icons-outlined mx-2">power_settings_new</i>Logout
+</asp:LinkButton>
           </div>
         </li>
       </ul>
@@ -214,18 +213,13 @@
           </ul>
         </li>
         <li>
-          <a href="admin_profile.aspx">
-            <div class="parent-icon"><i class="material-icons-outlined">person</i>
-            </div>
-            <div class="menu-title">Profile</div>
-          </a>
         </li>
         <li>
-          <a href="admin_login.aspx">
-            <div class="parent-icon"><i class="material-icons-outlined">power_settings_new</i>
-            </div>
-            <div class="menu-title">Logout</div>
-          </a>
+
+<asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click">
+    <i class="material-icons-outlined mx-2">power_settings_new</i>Logout
+</asp:LinkButton>
+
         </li>
       </ul>
       <!--end navigation-->
@@ -329,7 +323,7 @@
   <script>
     new PerfectScrollbar(".user-list")
   </script>
-
+        </form>
 </body>
 
 </html>

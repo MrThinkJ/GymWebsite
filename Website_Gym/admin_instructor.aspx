@@ -2,7 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <!--start main wrapper-->
-    <form id="form1" runat="server">
         <main class="main-wrapper">
             <div class="main-content">
 
@@ -155,5 +154,4 @@
             </div>
         </main>
         <!--end main wrapper-->
-    </form>
 </asp:Content>

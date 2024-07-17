@@ -11,7 +11,7 @@ namespace Website_Gym
 {
 
 
-    public partial class Admin
+    public partial class Admin_List
     {
 
         /// <summary>

@@ -115,7 +115,7 @@ $(function () {
 
     // Lấy giá trị từ HTML
     var onlineUsersText = document.getElementById("onlineUsers").innerText;
-    var totalUsersText = document.getElementById("targetUsers").innerText;
+    var totalUsersText = document.getElementById("PercentageChangeLiteral").innerText;
 
     // Chuyển đổi giá trị thành số
     var onlineUsers = parseInt(onlineUsersText);

@@ -6,44 +6,93 @@ namespace Website_Gym
 {
     public class Connect
     {
-        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Study\TMDT\GymWebsiteProject\Website_Gym\App_Data\QLGym.mdf;Integrated Security=True";
-        private SqlConnection conn;
+        SqlConnection conn;
+
+        public Connect()
+        {
+            // Khởi tạo kết nối trong constructor
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\HOME\\source\\repos\\Gym_Website\\GymWebsite\\Website_Gym\\App_Data\\QLGym.mdf;Integrated Security=True";
+            conn = new SqlConnection(connectionString);
+        }
 
         public void openConnection()
         {
-            conn = new SqlConnection(connectionString);
-            conn.Open(); // Mở kết nối ở đây
-        }
-
-        public void closeConnection()
-        {
-            if (conn.State == ConnectionState.Open)
-            {
-                conn.Close();
-            }
-        }
-
-        public int executeNonQuery(string sql)
-        {
-            int kq = 0;
             try
             {
-                openConnection(); // Đảm bảo kết nối được mở ở đây
-                using (SqlCommand command = new SqlCommand(sql, conn))
+                if (conn.State != ConnectionState.Open)
                 {
-                    kq = command.ExecuteNonQuery();
+                    conn.Open();
                 }
             }
             catch (Exception e)
             {
                 // Log exception
-                throw new Exception("Database error: " + e.Message);
+                throw new Exception("Error opening connection: " + e.Message);
+            }
+        }
+
+        public void closeConnection()
+        {
+            try
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                // Log exception
+                throw new Exception("Error closing connection: " + e.Message);
+            }
+        }
+
+        public int executeNonQuery(string sql)
+        {
+            int result = 0;
+            try
+            {
+                openConnection();
+                using (SqlCommand command = new SqlCommand(sql, conn))
+                {
+                    result = command.ExecuteNonQuery();
+                }
+            }
+            catch (Exception e)
+            {
+                // Log exception
+                throw new Exception("Error executing non-query: " + e.Message);
             }
             finally
             {
                 closeConnection();
             }
-            return kq;
+            return result;
+        }
+
+        public int executeOrGetSingleData(string sql)
+        {
+            int result = 0;
+            try
+            {
+                openConnection();
+                SqlCommand comm = new SqlCommand(sql, conn);
+                object scalarResult = comm.ExecuteScalar();
+                if (scalarResult != null && scalarResult != DBNull.Value)
+                {
+                    result = Convert.ToInt32(scalarResult);
+                }
+            }
+            catch (Exception e)
+            {
+                // Log exception or handle as needed
+                throw new Exception("Error executing or getting single data: " + e.Message);
+            }
+            finally
+            {
+                closeConnection();
+            }
+            return result;
         }
 
         public DataTable getData(string sql)
@@ -57,7 +106,8 @@ namespace Website_Gym
             }
             catch (Exception e)
             {
-                dt = null;
+                // Log exception or handle as needed
+                throw new Exception("Error getting data: " + e.Message);
             }
             finally
             {

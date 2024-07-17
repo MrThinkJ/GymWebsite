@@ -13,5 +13,12 @@ namespace Website_Gym
         {
 
         }
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear(); 
+            Session.Abandon(); 
+            Response.Redirect("~/login_admin.aspx");
+        }
+
     }
 }

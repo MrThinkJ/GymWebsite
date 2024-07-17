@@ -109,8 +109,6 @@
     <Content Include="admin_customer.aspx" />
     <Content Include="admin_index.aspx" />
     <Content Include="admin_instructor.aspx" />
-    <Content Include="admin_login.aspx" />
-    <Content Include="admin_profile.aspx" />
     <Content Include="App_Data\QLGym.mdf" />
     <Content Include="App_Data\QLGym_log.ldf">
       <DependentUpon>QLGym.mdf</DependentUpon>
@@ -251,9 +249,9 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Dem.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -262,8 +260,10 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Global.asax" />
     <Content Include="index.aspx" />
     <Content Include="join.aspx" />
+    <Content Include="login_admin.aspx" />
     <Content Include="Master.Master" />
     <Content Include="assets\css\style.css.map" />
     <Content Include="assets\fonts\lg.eot" />
@@ -645,20 +645,6 @@
     <Compile Include="admin_instructor.aspx.designer.cs">
       <DependentUpon>admin_instructor.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin_login.aspx.cs">
-      <DependentUpon>admin_login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin_login.aspx.designer.cs">
-      <DependentUpon>admin_login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin_profile.aspx.cs">
-      <DependentUpon>admin_profile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin_profile.aspx.designer.cs">
-      <DependentUpon>admin_profile.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="BMICaculator.cs" />
@@ -693,6 +679,13 @@
     </Compile>
     <Compile Include="join.aspx.designer.cs">
       <DependentUpon>join.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login_admin.aspx.cs">
+      <DependentUpon>login_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login_admin.aspx.designer.cs">
+      <DependentUpon>login_admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Master.Master.cs">
       <DependentUpon>Master.Master</DependentUpon>
