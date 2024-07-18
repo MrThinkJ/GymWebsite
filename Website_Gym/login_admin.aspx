@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 
 <html lang="en" data-bs-theme="blue-theme">
-<head runat="server">
+<
+    runat="server">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gymfito Login</title>
@@ -21,7 +22,7 @@
     <link href="sass/dark-theme.css" rel="stylesheet">
     <link href="sass/blue-theme.css" rel="stylesheet">
     <link href="sass/responsive.css" rel="stylesheet">
-</head>
+</>
 <body>
     <form id="form1" runat="server" method="post">
         <div class="auth-basic-wrapper d-flex align-items-center justify-content-center">

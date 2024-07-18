@@ -23,7 +23,8 @@
                 <!-- Start Main Content -->
                 <div class="row">
 
-                    <!-- Start Header Instructor -->
+                    <!-- Start 
+                        er Instructor -->
                     <div class="row g-3">
                         <div class="d-flex justify-content-between">
                             <div class="col-auto">
