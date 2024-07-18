@@ -13,66 +13,48 @@ namespace Website_Gym {
     public partial class admin_index {
         
         /// <summary>
-        /// litUsername control.
+        /// totalUsers1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litUsername;
+        protected global::System.Web.UI.WebControls.Literal totalUsers1;
         
         /// <summary>
-        /// NumberUsersLiteral control.
+        /// userOnline control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal NumberUsersLiteral;
+        protected global::System.Web.UI.WebControls.Literal userOnline;
         
         /// <summary>
-        /// TargetUsersLiteral control.
+        /// totalUsers3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal TargetUsersLiteral;
+        protected global::System.Web.UI.WebControls.Literal totalUsers3;
         
         /// <summary>
-        /// PercentageChangeLiteral control.
+        /// totalUsers2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal PercentageChangeLiteral;
+        protected global::System.Web.UI.WebControls.Literal totalUsers2;
         
         /// <summary>
-        /// OnlineUsersLiteral control.
+        /// classRepeater control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal OnlineUsersLiteral;
-        
-        /// <summary>
-        /// TotalUsers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal TotalUsers;
-        
-        /// <summary>
-        /// ClassRepeater control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater ClassRepeater;
+        protected global::System.Web.UI.WebControls.Repeater classRepeater;
     }
 }

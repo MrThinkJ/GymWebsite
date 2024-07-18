@@ -11,7 +11,7 @@ namespace Website_Gym
         public Connect()
         {
             // Khởi tạo kết nối trong constructor
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\HOME\\source\\repos\\Gym_Website\\GymWebsite\\Website_Gym\\App_Data\\QLGym.mdf;Integrated Security=True";
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\QLGym.mdf;Integrated Security=True";
             conn = new SqlConnection(connectionString);
         }
 
