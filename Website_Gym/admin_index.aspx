@@ -20,7 +20,7 @@
             <!--end breadcrumb-->
 
             <div class="row">
-                <div class="col-xxl-8 d-flex align-items-stretch">
+                <div class="col-xxl-12 d-flex align-items-stretch">
                     <div class="card w-100 overflow-hidden rounded-4">
                         <div class="card-body position-relative p-4">
                             <div class="row">
@@ -30,7 +30,7 @@
                                             height="60" alt="user">
                                         <div class="">
                                             <p class="mb-0 fw-semibold">Welcome back</p>
-                                            <h4 class="fw-semibold mb-0 fs-4 mb-0"><asp:Literal ID="litUsername" runat="server" /></h4>
+                                            <h4 class="fw-semibold mb-0 fs-4 mb-0">Admin!</h4>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center gap-5">
@@ -57,7 +57,7 @@
                 </div>
 
                 <!-- Start Access User -->
-                <div class="col-xl-6 col-xxl-2 d-flex align-items-stretch">
+                <div class="col-xl-6 col-xxl-4 d-flex align-items-stretch" style="max-height:280px;">
                     <div class="card w-100 rounded-4">
                         <div class="card-body">
                             <div class="d-flex align-items-start justify-content-between mb-1">
@@ -78,7 +78,7 @@
                 <!-- End Number User -->
 
                 <!-- Start User Online -->
-                <div class="col-xl-6 col-xxl-2 d-flex align-items-stretch">
+                <div class="col-xl-6 col-xxl-2 d-flex align-items-stretch" style="max-height:280px;">
                     <div class="card w-100 rounded-4">
                         <div class="card-body">
                             <div class="d-flex align-items-start justify-content-between">
@@ -91,40 +91,12 @@
                                 <div id="chart2"></div>
                             </div>
                             <div class="text-center m-auto">
-                                <p class="mb-0 mt-1"><span class=" me-1"  id="onlineUsers"><asp:Literal  ID="OnlineUsersLiteral" runat="server" /></span>Online</p>
+                                <p class="mb-0 mt-1" id="onlineUsers"><span class=" me-1" ><asp:Literal  ID="OnlineUsersLiteral" runat="server" /></span>Online</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- End User Online -->
-
-                <!-- Start Register Daily -->
-                <div class="col-xl-6 col-xxl-6 d-flex align-items-stretch">
-                    <div class="card w-100 rounded-4">
-                        <div class="card-body">
-                            <div class="text-center">
-                                <h5 class="mb-0">Daily Register</h5>
-                            </div>
-                            <div class="mt-4" id="chart5"></div>
-                            <p>Daily Register From User</p>
-                            <div class="d-none">
-                                <p id="numberRegisterInMon">2</p>
-                                <p id="numberRegisterInTue">6</p>
-                                <p id="numberRegisterInWed">3</p>
-                                <p id="numberRegisterInThu">8</p>
-                                <p id="numberRegisterInFri">10</p>
-                                <p id="numberRegisterInSat">12</p>
-                                <p id="numberRegisterInSun">9</p>
-                            </div>
-                            <div class="d-flex align-items-center gap-3 mt-4">
-                                <div class="">
-                                    <h1 class="mb-0 text-primary">Total: <span id="totalRegister">69</span></h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Register Daily -->
 
                 <!-- Start Class User -->
                 <div class="col-xl-6 col-xxl-6 d-flex align-items-stretch">

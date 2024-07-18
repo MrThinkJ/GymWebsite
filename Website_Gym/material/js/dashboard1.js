@@ -1,11 +1,7 @@
-$(function () {
+﻿$(function () {
     "use strict";
 
-
-
-
-    // chart 1
-
+    // Chart 1
     var numberUsersText = document.getElementById("numberUsers").innerText;
     var targetUsersText = document.getElementById("targetUsers").innerText;
 
@@ -14,7 +10,7 @@ $(function () {
 
     var percentage = (numberUsers / targetUsers) * 100;
 
-    var options = {
+    var options1 = {
         series: [percentage],
         chart: {
             height: 180,
@@ -31,31 +27,12 @@ $(function () {
                     margin: 0,
                     size: '80%',
                     background: 'transparent',
-                    image: undefined,
-                    imageOffsetX: 0,
-                    imageOffsetY: 0,
-                    position: 'front',
-                    dropShadow: {
-                        enabled: false,
-                        top: 3,
-                        left: 0,
-                        blur: 4,
-                        opacity: 0.24
-                    }
+                    position: 'front'
                 },
                 track: {
                     background: 'rgba(0, 0, 0, 0.1)',
                     strokeWidth: '67%',
-                    margin: 0,
-                    dropShadow: {
-                        enabled: false,
-                        top: -3,
-                        left: 0,
-                        blur: 4,
-                        opacity: 0.35
-                    }
                 },
-
                 dataLabels: {
                     show: true,
                     name: {
@@ -104,27 +81,19 @@ $(function () {
         labels: ['Total Orders'],
     };
 
-    var chart = new ApexCharts(document.querySelector("#chart1"), options);
-    chart.render();
+    var chart1 = new ApexCharts(document.querySelector("#chart1"), options1);
+    chart1.render();
 
-
-
-
-
-    // chart 2
-
-    // Lấy giá trị từ HTML
+    // Chart 2
     var onlineUsersText = document.getElementById("onlineUsers").innerText;
-    var totalUsersText = document.getElementById("PercentageChangeLiteral").innerText;
+    var totalUsersText = document.getElementById("percentageChange").innerText;
 
-    // Chuyển đổi giá trị thành số
-    var onlineUsers = parseInt(onlineUsersText);
-    var totalUsers = parseInt(totalUsersText);
+    var onlineUsers = parseInt(onlineUsersText.replace(/\D/g, ''));
+    var totalUsers = parseInt(totalUsersText.replace(/\D/g, ''));
 
-    // Tính toán phần trăm
     var onlinePercentage = (onlineUsers / totalUsers) * 100;
 
-    var options = {
+    var options2 = {
         series: [onlinePercentage],
         chart: {
             height: 150,
@@ -140,7 +109,7 @@ $(function () {
                 },
                 dataLabels: {
                     name: {
-                        show: false, // Ẩn tên "Users Online"
+                        show: false,
                     },
                     value: {
                         show: true,
@@ -148,7 +117,7 @@ $(function () {
                         color: '#111',
                         offsetY: 10,
                         formatter: function (val) {
-                            return onlinePercentage.toFixed(2) + "%"; // Hiển thị phần trăm với 2 chữ số thập phân
+                            return onlinePercentage.toFixed(2) + "%";
                         }
                     }
                 }
@@ -171,328 +140,178 @@ $(function () {
         stroke: {
             lineCap: 'round'
         },
-        labels: [''], // Xóa chữ "Users Online"
+        labels: [''],
     };
 
-    var chart = new ApexCharts(document.querySelector("#chart2"), options);
-    chart.render();
+    var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
+    chart2.render();
+
+    $(document).ready(function () {
+        // Lấy tất cả các phần tử literal
+        var mon = document.getElementById('<%= numberRegisterInMon.ClientID %>');
+        var tue = document.getElementById('<%= numberRegisterInTue.ClientID %>');
+        var wed = document.getElementById('<%= numberRegisterInWed.ClientID %>');
+        var thu = document.getElementById('<%= numberRegisterInThu.ClientID %>');
+        var fri = document.getElementById('<%= numberRegisterInFri.ClientID %>');
+        var sat = document.getElementById('<%= numberRegisterInSat.ClientID %>');
+        var sun = document.getElementById('<%= numberRegisterInSun.ClientID %>');
+
+        // Kiểm tra xem tất cả các phần tử có tồn tại không
+        if (mon && tue && wed && thu && fri && sat && sun) {
+            const data = [
+                parseInt(mon.textContent),
+                parseInt(tue.textContent),
+                parseInt(wed.textContent),
+                parseInt(thu.textContent),
+                parseInt(fri.textContent),
+                parseInt(sat.textContent),
+                parseInt(sun.textContent)
+            ];
+
+            console.log("Data for chart 5:", data);
+
+            var options5 = {
+                series: [{
+                    name: "Daily Registers",
+                    data: data
+                }],
+                chart: {
+                    foreColor: "#9ba7b2",
+                    height: 280,
+                    type: 'bar',
+                    toolbar: {
+                        show: false
+                    },
+                    sparkline: {
+                        enabled: false
+                    },
+                    zoom: {
+                        enabled: false
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                stroke: {
+                    width: 1,
+                    curve: 'smooth'
+                },
+                plotOptions: {
+                    bar: {
+                        horizontal: false,
+                        borderRadius: 4,
+                        columnWidth: '45%',
+                    }
+                },
+                fill: {
+                    type: 'gradient',
+                    gradient: {
+                        shade: 'dark',
+                        gradientToColors: ['#009efd'],
+                        shadeIntensity: 1,
+                        type: 'vertical',
+                        opacityFrom: 1,
+                        opacityTo: 1,
+                        stops: [0, 100, 100, 100]
+                    },
+                },
+                colors: ["#2af598"],
+                grid: {
+                    show: true,
+                    borderColor: 'rgba(255, 255, 255, 0.1)',
+                },
+                xaxis: {
+                    categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                },
+                tooltip: {
+                    theme: "dark",
+                    marker: {
+                        show: false
+                    }
+                },
+            };
+
+            var chart5 = new ApexCharts(document.querySelector("#chart5"), options5);
+            chart5.render();
+        } else {
+            console.error("One or more elements are not found");
+        }
+    });
 
 
+    // Chart 6
+    const classEntries = document.querySelectorAll("#class-data .class-entry");
+    const dataList = [];
+    const labels = [];
 
+    classEntries.forEach(entry => {
+        const label = entry.querySelector("p").textContent.trim();
+        const value = parseInt(entry.querySelector(".class-value").textContent.trim());
+        labels.push(label);
+        dataList.push(value);
+    });
 
-
-
-
-    // chart 3
-
-    var options = {
-        series: [{
-            name: "Net Sales",
-            data: [4, 10, 12, 17, 25, 30, 40, 55, 68]
-        }],
+    var options6 = {
+        series: dataList,
         chart: {
-            //width:150,
-            height: 120,
-            type: 'bar',
-            sparkline: {
-                enabled: !0
-            },
-            zoom: {
-                enabled: false
-            }
+            height: 290,
+            type: 'donut',
         },
-        dataLabels: {
-            enabled: false
-        },
-        stroke: {
-            width: 1,
-            curve: 'smooth',
-            color: ['transparent']
+        labels: labels,
+        legend: {
+            position: 'bottom',
+            show: false
         },
         fill: {
             type: 'gradient',
             gradient: {
                 shade: 'dark',
-                gradientToColors: ['#7928ca'],
+                gradientToColors: ['#ee0979', '#17ad37', '#ec6ead'],
                 shadeIntensity: 1,
                 type: 'vertical',
                 opacityFrom: 1,
                 opacityTo: 1,
-                stops: [0, 100, 100, 100]
             },
         },
-        colors: ["#ff0080"],
-        plotOptions: {
-            bar: {
-                horizontal: false,
-                borderRadius: 4,
-                borderRadiusApplication: 'around',
-                borderRadiusWhenStacked: 'last',
-                columnWidth: '45%',
-            }
-        },
-
-        tooltip: {
-            theme: "dark",
-            fixed: {
-                enabled: !1
-            },
-            x: {
-                show: !1
-            },
-            y: {
-                title: {
-                    formatter: function (e) {
-                        return ""
-                    }
-                }
-            },
-            marker: {
-                show: !1
-            }
-        },
-        xaxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
-        }
-    };
-
-    var chart = new ApexCharts(document.querySelector("#chart3"), options);
-    chart.render();
-
-
-
-
-    // chart 4
-
-    var options = {
-        series: [{
-            name: "Net Sales",
-            data: [4, 25, 14, 34, 10, 39]
-        }],
-        chart: {
-            //width:150,
-            height: 105,
-            type: 'line',
-            sparkline: {
-                enabled: !0
-            },
-            zoom: {
-                enabled: false
-            }
-        },
+        colors: ["#ff6a00", "#98ec2d", "#3494e6"],
         dataLabels: {
             enabled: false
         },
-        stroke: {
-            width: 3,
-            curve: 'straight'
-        },
-        fill: {
-            type: 'gradient',
-            gradient: {
-                shade: 'dark',
-                gradientToColors: ['#00f2fe'],
-                shadeIntensity: 1,
-                type: 'vertical',
-                opacityFrom: 1,
-                opacityTo: 1,
-                stops: [0, 100, 100, 100]
-            },
-        },
-
-        colors: ["#ee0979"],
-        tooltip: {
-            theme: "dark",
-            fixed: {
-                enabled: !1
-            },
-            x: {
-                show: !1
-            },
-            y: {
-                title: {
-                    formatter: function (e) {
-                        return ""
-                    }
+        plotOptions: {
+            pie: {
+                donut: {
+                    size: "85%"
                 }
-            },
-            marker: {
-                show: !1
             }
         },
-        markers: {
-            show: !1,
-            size: 5,
-        },
-        xaxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
-        }
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                chart: {
+                    height: 270
+                },
+                legend: {
+                    position: 'bottom',
+                    show: false
+                }
+            }
+        }]
     };
 
-    var chart = new ApexCharts(document.querySelector("#chart4"), options);
-    chart.render();
+    var chart6 = new ApexCharts(document.querySelector("#chart6"), options6);
+    chart6.render();
 
-
-
-
-    // chart 5
-
-    const data = [
-        parseInt(document.getElementById("numberRegisterInMon").textContent),
-        parseInt(document.getElementById("numberRegisterInTue").textContent),
-        parseInt(document.getElementById("numberRegisterInWed").textContent),
-        parseInt(document.getElementById("numberRegisterInThu").textContent),
-        parseInt(document.getElementById("numberRegisterInFri").textContent),
-        parseInt(document.getElementById("numberRegisterInSat").textContent),
-        parseInt(document.getElementById("numberRegisterInSun").textContent)
-      ];
-    
-      var options = {
-        series: [{
-          name: "Daily Registers",
-          data: data
-        }],
-        chart: {
-          foreColor: "#9ba7b2",
-          height: 280,
-          type: 'bar',
-          toolbar: {
-            show: !1
-          },
-          sparkline: {
-            enabled: !1
-          },
-          zoom: {
-            enabled: false
-          }
-        },
-        dataLabels: {
-          enabled: false
-        },
-        stroke: {
-          width: 1,
-          curve: 'smooth'
-        },
-        plotOptions: {
-          bar: {
-            horizontal: false,
-            borderRadius: 4,
-            borderRadiusApplication: 'around',
-            borderRadiusWhenStacked: 'last',
-            columnWidth: '45%',
-          }
-        },
-        fill: {
-          type: 'gradient',
-          gradient: {
-            shade: 'dark',
-            gradientToColors: ['#009efd'],
-            shadeIntensity: 1,
-            type: 'vertical',
-            opacityFrom: 1,
-            opacityTo: 1,
-            stops: [0, 100, 100, 100]
-          },
-        },
-        colors: ["#2af598"],
-        grid: {
-          show: true,
-          borderColor: 'rgba(255, 255, 255, 0.1)',
-        },
-        xaxis: {
-          categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-        },
-        tooltip: {
-          theme: "dark",
-          marker: {
-            show: !1
-          }
-        },
-      };
-    
-      var chart = new ApexCharts(document.querySelector("#chart5"), options);
-      chart.render();
-
-
-
-// Collect data from HTML
-const classEntries = document.querySelectorAll("#class-data .class-entry");
-const dataList = [];
-const labels = [];
-
-classEntries.forEach(entry => {
-  const label = entry.querySelector("p").textContent.trim();
-  const value = parseInt(entry.querySelector(".class-value").textContent.trim());
-  labels.push(label);
-  dataList.push(value);
-});
-
-// Chart 6
-var options = {
-  series: dataList,
-  chart: {
-    height: 290,
-    type: 'donut',
-  },
-  labels: labels,
-  legend: {
-    position: 'bottom',
-    show: false
-  },
-  fill: {
-    type: 'gradient',
-    gradient: {
-      shade: 'dark',
-      gradientToColors: ['#ee0979', '#17ad37', '#ec6ead'],
-      shadeIntensity: 1,
-      type: 'vertical',
-      opacityFrom: 1,
-      opacityTo: 1,
-    },
-  },
-  colors: ["#ff6a00", "#98ec2d", "#3494e6"],
-  dataLabels: {
-    enabled: false
-  },
-  plotOptions: {
-    pie: {
-      donut: {
-        size: "85%"
-      }
-    }
-  },
-  responsive: [{
-    breakpoint: 480,
-    options: {
-      chart: {
-        height: 270
-      },
-      legend: {
-        position: 'bottom',
-        show: false
-      }
-    }
-  }]
-};
-
-var chart = new ApexCharts(document.querySelector("#chart6"), options);
-chart.render();
-
-
-
-
-    // chart 7
-    var options = {
+    // Chart 7
+    var options7 = {
         series: [{
             name: "Total Accounts",
             data: [4, 10, 25, 12, 25, 18, 40, 22, 7]
         }],
         chart: {
-            //width:150,
             height: 105,
             type: 'area',
             sparkline: {
-                enabled: !0
+                enabled: true
             },
             zoom: {
                 enabled: false
@@ -509,117 +328,28 @@ chart.render();
             type: 'gradient',
             gradient: {
                 shade: 'dark',
-                gradientToColors: ['#fc185a'],
+                gradientToColors: ['#02c27a'],
                 shadeIntensity: 1,
                 type: 'vertical',
-                opacityFrom: 0.8,
-                opacityTo: 0.2,
-                //stops: [0, 100, 100, 100]
+                opacityFrom: 1,
+                opacityTo: 1,
             },
         },
-
-        colors: ["#ffc107"],
+        colors: ["#02c27a"],
+        yaxis: {
+            show: false
+        },
+        legend: {
+            show: false
+        },
         tooltip: {
-            theme: "dark",
-            fixed: {
-                enabled: !1
-            },
+            theme: 'dark',
             x: {
-                show: !1
+                show: false
             },
-            y: {
-                title: {
-                    formatter: function (e) {
-                        return ""
-                    }
-                }
-            },
-            marker: {
-                show: !1
-            }
         },
-        xaxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
-        }
     };
 
-    var chart = new ApexCharts(document.querySelector("#chart7"), options);
-    chart.render();
-
-
-
-    // chart 8
-
-    var options = {
-        series: [{
-            name: "Total Sales",
-            data: [4, 10, 25, 12, 25, 18, 40, 22, 7]
-        }],
-        chart: {
-            //width:150,
-            height: 210,
-            type: 'area',
-            sparkline: {
-                enabled: !0
-            },
-            zoom: {
-                enabled: false
-            }
-        },
-        dataLabels: {
-            enabled: false
-        },
-        stroke: {
-            width: 3,
-            curve: 'straight'
-        },
-        fill: {
-            type: 'gradient',
-            gradient: {
-                shade: 'dark',
-                gradientToColors: ['#17ad37'],
-                shadeIntensity: 1,
-                type: 'vertical',
-                opacityFrom: 0.7,
-                opacityTo: 0.0,
-                //stops: [0, 100, 100, 100]
-            },
-        },
-        colors: ["#98ec2d"],
-        tooltip: {
-            theme: "dark",
-            fixed: {
-                enabled: !1
-            },
-            x: {
-                show: !1
-            },
-            y: {
-                title: {
-                    formatter: function (e) {
-                        return ""
-                    }
-                }
-            },
-            marker: {
-                show: !1
-            }
-        },
-        markers: {
-            show: !1,
-            size: 5,
-        },
-        xaxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
-        }
-    };
-
-    var chart = new ApexCharts(document.querySelector("#chart8"), options);
-    chart.render();
-
-
-
-
-
-
+    var chart7 = new ApexCharts(document.querySelector("#chart7"), options7);
+    chart7.render();
 });

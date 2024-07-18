@@ -87,5 +87,6 @@ namespace Website_Gym
                 System.Diagnostics.Debug.WriteLine("Lỗi trong LoadData: " + ex.Message);
             }
         }
+
     }
 }
